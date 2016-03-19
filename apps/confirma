@@ -19,7 +19,7 @@ email=`echo "$message_body" | cut -d: -f3`
 	echo '<p>Agradecemos desde já.</p>'
 	echo '<img src="http://liberio.org/cha/nomes.png" />'
 	echo '</center>'
-) | mail --append 'Content-Type: text/html' --append 'From: cha@liberio.org' --subject 'Chá de Panela' $email
+) | mail --append 'Content-Type: text/html' --append 'From: cha@liberio.org' --subject 'Chá de Panela' "$email" &
 echo 'HTTP/1.1 201 Created'
 echo 'Content-Type: text/plain'
 echo ''
