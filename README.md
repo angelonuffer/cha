@@ -1,4 +1,4 @@
-# Cha 1.1
+# Cha 1.2
 
 Invitation and gift list for bridal shower.
 
