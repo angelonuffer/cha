@@ -22,6 +22,7 @@ div#titulo img {
 	position: absolute;
 	top: 0;
 	height: 90px;
+	z-index: -1;
 }
 
 div#titulo h3 {
