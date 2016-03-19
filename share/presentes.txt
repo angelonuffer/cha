@@ -1,0 +1,51 @@
+Jogo Americano:1
+Ralador (inox):1
+Espremedor de Frutas Elétrico:1
+Tábua de Passar:1
+Frigideira Anti-Aderente:2
+Jogo de Pratos Rasos (liso):1
+Jogo de Pratos Fundos (liso):2
+Jogo de Copos (liso):2
+Kit de Panos de Pratos (5 unidades):4
+Escorredor (inox):1
+Conjunto de Talheres (preto/amarelo/inox):2
+Jarra para Suco (1l):1
+Jarra para Suco (2l):1
+Lixeira para Cozinha (preto/inox):1
+Sanduicheira:1
+Panela de Pressão Anti-Aderente:1
+Jogo de Tapetes para Banheiro:1
+Jogo de Tapetes para Cozinha:1
+Kit de Potes (branco/amarelo/preto):6
+Kit Espátula e Pincel (silicone):2
+Kit Pegador de Arroz e Escumadeira (inox):1
+Conjunto de Sobremesa:1
+Espátula para Bolo e Colher de Sorvete (inox/acrílico):1
+Liquidificador:1
+Forma para Microondas:1
+Forma para Pizza:2
+Tabuleiro de Alumínio:2
+Forma para Bolo:1
+Forma com Fundo Removível:2
+Travessa de Vidro:3
+Jogo de Toalha de Banho:1
+Jogo de Toalhas de Rosto:2
+Faca para Corte de Carne:1
+Porta-Talher para Pia (inox):1
+Kit Rolo de Massas, Colher de Pau e Socador de Alho:1
+Batedeira:1
+Boleira:1
+Porta-Frios e Fruteira:1
+Porta-Biscoito:2
+Porta-Mantimentos (inox/vidro):1
+Kit Condimentos:1
+Kit Abridor de Latas, de Vinho e Pegador de Saladas:1
+Toalha de Mesa:1
+Cortina para Banheiro:2
+Espelho Grande:1
+Escorredor de Arroz, Peneira e Separador de Gema:1
+Concha de Feijão e Colherona (inox):1
+Batedor de Claras:1
+Açucareiro (amarelo/vidro):1
+Saleiro (amarelo/vidro):1
+Espátula para Manteiga (2 unidades):1

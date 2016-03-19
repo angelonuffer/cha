@@ -1,0 +1,25 @@
+#! /bin/bash
+
+sleep 1
+[ -v CONTENT_LENGTH ] && read -N $CONTENT_LENGTH message_body
+echo "$TCPREMOTEIP:`date +%s`:$message_body" >> /var/lib/cha/chosed.txt
+email=`echo "$message_body" | cut -d: -f3`
+(
+	nome=`echo "$message_body" | cut --delimiter ':' --fields '2'`
+	echo '<center>'
+	echo '<p>Olá, '$nome'!</p>'
+	echo '<p>Este é um e-mail de confirmação para o nosso chá de panela, que será no'
+	echo 'dia 16/04/2016, às 17h, no condomínio Mar da Irlanda, localizado na Avenida'
+	echo 'Otoniel Gomes Tavares, número 1287, bairro São José do Barreto, Macaé-RJ.</p>'
+	echo '<p>Veja o que você escolheu para nos presentear:</p>'
+	echo '<ul>'
+	echo '<li>'
+	echo "$message_body" | cut --delimiter ':' --fields '1' | sed --expression 's/|/<li>/g'
+	echo '</ul>'
+	echo '<p>Agradecemos desde já.</p>'
+	echo '<img src="http://liberio.org/cha/nomes.png" />'
+	echo '</center>'
+) | mail --append 'Content-Type: text/html' --append 'From: cha@liberio.org' --subject 'Chá de Panela' $email
+echo 'HTTP/1.1 201 Created'
+echo 'Content-Type: text/plain'
+echo ''

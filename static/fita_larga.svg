@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800px" height="110px">
+	<path stroke-linecap="square" style="stroke: #383838" stroke-width="3" fill="none" d="
+		M50,20
+		l700,0
+		l0,50
+		l-700,0
+		l0,-50
+		m0,20
+		l-30,-10
+		l0,50
+		l45,15
+		l-15,-25
+		m16,25
+		l0,-25
+		m684,-30
+		l30,-10
+		l0,50
+		l-45,15
+		l15,-25
+		m-16,25
+		l0,-25
+	" />
+</svg>

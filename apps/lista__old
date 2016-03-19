@@ -1,0 +1,48 @@
+#! /usr/bin/rmshebang haml
+-# encoding: utf-8
+
+HTTP/1.1 200 OK
+Content-Type: text/html
+= ""
+
+%html
+	%head
+		%meta(charset="utf-8")
+		%meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+		%link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+		%link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700")
+		%link(rel="stylesheet" href="/cha/lista.css")
+		%script(src="/cha/lista.js")
+	%body
+		#titulo
+			%img(src="/cha/fita.png" width="100%")
+			%h3 LISTA DE PRESENTES
+			#presentes
+				- File.readlines("/usr/share/tiva/cha/presentes.txt").each do |line|
+					.presente(onclick="selecionarPresente(this)")= line.split(":")
+			#identificacao
+				%a.fa.fa-times#cancelar
+				%p#escolha
+				%button.fa.fa-plus#escolher_mais(onclick="escolherMais()") Itens
+				%label(for="nome") Nome e Sobrenome
+				%input#nome(type="text")
+				%label(for="email") E-mail
+				%input#email(type="text")
+				%input#vou(type="checkbox" checked)
+				Irei, com mais
+				%input#acompanhantes(type="number" value="0")
+				pessoas.
+				%label(for="recado") Deixe-nos um Recado:
+				%textarea#recado
+				%button#finalizar(onclick="finalizar()") Finalizar
+			#obrigado
+				%a.fa.fa-times#concluido(href="/cha/convite.html")
+				%p#mensagem
+				#nomes
+					%h2 &Acirc;NGELO OT&Aacute;VIO
+					%h2= "&"
+					%h2 DANIELA
+				#coracao
+					%h1 {
+					%img(src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.1.1/assets/png/1f49f.png")
+					%h1 }

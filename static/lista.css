@@ -1,0 +1,231 @@
+@font-face {
+	font-family: "American Typewriter";
+	src: url(/cha/american-typewriter.ttf);
+}
+
+@keyframes pulse_animation {
+	0% { transform: scale(1); }
+	30% { transform: scale(1); }
+	40% { transform: scale(1.1); }
+	50% { transform: scale(1); }
+	60% { transform: scale(1); }
+	70% { transform: scale(1.1); }
+	80% { transform: scale(1); }
+	100% { transform: scale(1); }
+}
+
+body {
+	margin: 0;
+}
+
+div#titulo img {
+	position: absolute;
+	top: 0;
+	height: 90px;
+}
+
+div#titulo h3 {
+	text-align: center;
+	font-family: "American Typewriter", Arial;
+	font-weight: normal;
+	font-size: 1.2em;
+	margin-top: 24px;
+	color: #383838;
+}
+
+div#presentes {
+	margin-top: 36px;
+}
+
+div#presentes div.presente.selecionado {
+	position: relative;
+	cursor: default;
+}
+
+div#presentes div.presente.selecionado::after {
+	content: "";
+	border-bottom: 3px solid #fd4084;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+}
+
+div#presentes div.presente {
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	border-radius: 5px;
+	margin: 10px;
+	padding: 5px;
+	text-align: center;
+	font-family: Arial;
+	cursor: pointer;
+}
+
+div#identificacao {
+	position: fixed;
+	top: 10%;
+	left: 100%;
+	width: 80%;
+	background-color: white;
+	padding: 10px;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	border-radius: 5px;
+	transition-duration: 200ms;
+	z-index: 2;
+	font-family: "American Typewriter", Arial;
+}
+
+div#identificacao p#escolha {
+	font-weight: bold;
+}
+
+div#identificacao input[type=text] {
+	width: 100%;
+}
+
+div#identificacao input#acompanhantes {
+	width: 30px;
+}
+
+div#identificacao label {
+	display: block;
+}
+
+div#identificacao a#cancelar {
+	color: #fd4084;
+	float: right;
+	cursor: pointer;
+}
+
+div#obrigado a#concluido {
+	color: #fd4084;
+	float: right;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+div#identificacao button#finalizar {
+	color: #fd4084;
+	cursor: pointer;
+	text-align: center;
+	font-size: 1.1em;
+	width: 100%;
+	font-weight: bold;
+}
+
+div#identificacao button#escolher_mais {
+	color: #fd4084;
+	cursor: pointer;
+	text-align: center;
+	font-size: 1.1em;
+	width: 100%;
+	font-weight: bold;
+}
+
+div#identificacao textarea#recado {
+	width: 100%;
+	resize: none;
+}
+
+div#identificacao p#escolha {
+	margin-bottom: 0;
+}
+
+div#identificacao p#escolha a {
+	color: #fd4084;
+	cursor: pointer;
+}
+
+div#obrigado {
+	position: fixed;
+	top: 10%;
+	left: 100%;
+	width: 80%;
+	background-color: white;
+	padding: 10px;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	border-radius: 5px;
+	transition-duration: 200ms;
+	z-index: 2;
+	font-family: "American Typewriter", Arial;
+	text-align: center;
+}
+
+div#obrigado div#nomes h2 {
+	text-align: center;
+	font-family: "Amatic SC", Arial;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 0;
+	color: #383838;
+}
+
+div#obrigado div#coracao {
+	text-align: center;
+	margin-top: -20px;
+}
+
+div#obrigado div#coracao img {
+	width: 32px;
+	vertical-align: middle;
+}
+
+div#obrigado div#coracao h1 {
+	display: inline-block;
+	vertical-align: middle;
+	font-family: "American Typewriter", Arial;
+	font-weight: normal;
+	font-size: 33px;
+	color: #3A3A3A;
+	margin-top: 18px;
+}
+
+div#obrigado div#coracao h1:first-child {
+	margin-right: -9px;
+}
+
+div#obrigado div#coracao h1:last-child {
+	margin-left: -9px;
+}
+
+i#loading {
+	display: none;
+	position: fixed;
+	top: 40%;
+	left: 50%;
+	margin-left: -42px;
+	z-index: 2;
+	animation-name: pulse_animation;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	color: #fd4084;
+}
+
+@media screen and (max-width: 600px) {
+	.pc {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.phone {
+		display: none;
+	}
+	div#titulo img {
+		height: 110px;
+	}
+	div#titulo h3 {
+		font-size: 2.5em;
+	}
+	div#presentes div.presente {
+		width: 46%;
+		margin: 1%;
+		display: inline-block;
+	}
+}
